@@ -1,6 +1,6 @@
 {
   "name": "srw-libs",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "scripts": {
     "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files"
   },
