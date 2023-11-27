@@ -1,20 +1,30 @@
 {
-  "name": "srw-library",
-  "version": "1.0.0",
-  "description": "srw simple library",  
-  "scripts": {
-    "rollup": "rollup -c"
+  "name": "@smokesound/srw-libs",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/smokesound"
   },
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "version": "1.0.4",
+  "description": "srw simple library",
+  "scripts": {
+    "rollup": "rollup -c",
+    "build": "babel src -d dist",
+    "prepublishOnly": "npm run build"
+  },
+  "main": "src/index.js",
   "files": [
     "dist"
   ],
-  "type": "module",
-  "types": "dist/index.d.ts",
+  "keywords": [
+    "react",
+    "component",
+    "npm"
+  ],
   "author": "gilang",
   "license": "MIT",
   "dependencies": {
+    "@babel/cli": "^7.23.4",
+    "@babel/preset-env": "^7.23.3",
+    "@babel/preset-react": "^7.23.3",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.5",
