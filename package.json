@@ -1,37 +1,33 @@
 {
-  "name": "@smokesound/srw-libs",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/smokesound"
-  },
-  "version": "1.0.4",
-  "description": "srw simple library",
+  "name": "srw-libs",
+  "version": "0.1.1",
   "scripts": {
-    "rollup": "rollup -c",
-    "build": "babel src -d dist",
-    "prepublishOnly": "npm run build"
+    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files"
   },
-  "main": "src/index.js",
-  "files": [
-    "dist"
-  ],
   "keywords": [
     "react",
-    "component",
-    "npm"
+    "components",
+    "ui"
   ],
-  "author": "gilang",
-  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smokesound/srw-libs.git"
+  },
+  "private": false,
   "dependencies": {
-    "@babel/cli": "^7.23.4",
-    "@babel/preset-env": "^7.23.3",
-    "@babel/preset-react": "^7.23.3",
-    "@rollup/plugin-commonjs": "^25.0.7",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-typescript": "^11.1.5",
-    "@types/react": "^18.2.38",
     "react": "^18.2.0",
-    "rollup": "^4.5.1",
-    "rollup-plugin-dts": "^6.1.0",
-    "typescript": "^5.3.2"
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.44",
+    "@babel/core": "^7.23.3",
+    "@babel/preset-env": "^7.0.0-beta.44"
   }
 }
